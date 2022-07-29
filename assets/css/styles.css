@@ -1,0 +1,854 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+a, a:visited {
+    color:black
+}
+
+h1 {
+    font-size: x-large;
+}
+
+/* CONTAINER */
+
+.container {
+    max-width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerleft img {
+    padding: 35px 0 0 15px;
+    width: 40%;
+}
+
+.headerright nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerright nav a {
+    width: 150px;
+    padding: 40px 0;
+    text-align: center;
+    font-weight: 500;
+    border-top: 3px solid white;
+    color: black;
+}
+
+.headerright nav a:hover {
+    font-weight: 600;
+    color: #0065FC;
+    border-top: 3px solid #0065FC ;
+    transition: 0.3s;
+}
+
+
+/* HEADER MEDIA QUERRIES*/
+
+@media screen and (max-width: 768px)
+{
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .container header {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    .headerleft {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .headerleft img {
+        width: 30%;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .headerright {
+        width: 100%;
+    }
+
+    .headerright nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .headerright nav a {
+        border-top: none;
+        border-bottom: 3px solid #F2F2F2 ;
+    }
+
+    .headerright nav a:hover {
+        border-top: none;
+        border-bottom: 3px solid #0065FC ;
+        transition: 0.3s;
+    }
+} 
+
+/* MAIN */
+
+/* SECTION 1 : Titres*/
+
+.section1 {
+    margin: 0 20px;
+}
+
+.section1 span {
+    font-weight: 500;
+}
+
+.section1 h1 {
+    padding-top: 10px;
+}
+
+/* FORMULAIRE DE RECHERCHE*/
+
+.section1 form {
+    display: flex;
+}
+
+.section1 .locationbutton {
+    background-color: #F2F2F2;
+    padding: 17px;
+    border: 1px solid #F2F2F2;
+    border-radius: 17px 0 0 17px;
+}
+
+.section1 .search {
+    padding: 17px;
+    border: 1px solid #F2F2F2;
+    border-right: none;
+    font-weight: 700;
+    outline: none;
+}
+
+.section1 form input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.section1 form input:hover::placeholder, .section1 form input:focus::placeholder {
+    color: #595959;
+}
+
+.section1 .searchbutton {
+    background-color: #0065FC;
+    padding: 17px;
+    border: 1px solid #F2F2F2;
+    font-weight: 600;
+    font-size: medium;
+    color: white;
+    border-radius: 0 17px 17px 0;
+    cursor: pointer;
+}
+
+.section1 .searchbutton:hover {
+    background-color: #4d94ff;
+    transition: 0.3s;
+}
+
+.section1 .searchbutton i {
+    display: none;
+}
+
+/* FORMULAIRE DE RECHERCHE MEDIA QUERRIES*/
+
+@media screen and (max-width: 768px)
+{
+  .section1 .searchbutton .text  {
+    display: none;
+  }  
+
+  .section1 .searchbutton i {
+    display: block;
+  }
+
+  .section1 .searchbutton {
+    border-radius: 17px 17px 17px 17px;
+  }
+}
+
+/* FILTRES*/
+
+.section1 .filterinfo {
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.section1 .filter {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    align-content: space-between;
+}
+
+.section1 .filtertitle {
+    font-size: medium;
+    font-weight: 700;
+}
+
+.section1 .allfilters {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border: 2px solid #d8d9d8;
+    border-left: none;
+    border-radius: 50px;
+    margin-left: 23px;
+    cursor: pointer;
+}
+
+.section1 .allfilters:hover {
+    color: #4d4d4d;
+    background-color: #deebff;
+    border: 2px solid #deebff;
+    border-left: none;
+    transition: 0.3s;
+}
+
+.section1 .allfilters p {
+    font-size: medium;
+    font-weight: 700;
+    padding: 0px 17px;
+}
+
+.section1 .filterlogo {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #deebff;
+    border-radius: 50px;
+}
+
+.section1 .allfilters i {
+    color: #0065FC;
+    margin: auto;
+}
+
+/* Infos */
+
+.section1 p.info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.section1 .info button {
+    margin-right: 10px;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid #d8d9d8;
+    border-radius: 50%;
+}
+
+.section1 .info i {
+    margin: auto;
+    color: #0065FC;
+    font-size: small;
+    font-weight: 700;
+}
+
+/* FILTRES MEDIA QUERRIES*/
+
+@media screen and (max-width: 992px)
+{
+    .filtertitle {
+        width: 100%;
+        text-align: left;
+    }
+
+    .filtertitle p{
+        margin: 0;
+    }
+
+    .section1 .allfilters {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+
+}
+    
+@media screen and (max-width: 768px)
+{
+    .section1 .filter{
+        justify-content: flex-start;
+    }
+
+    .section1 .filterinfo {
+        margin-left: 0px;
+    }
+
+    .filtertitle {
+        width: 100%;
+    }
+
+    .filtertitle p{
+        margin-bottom: 0px;
+    }
+    
+    .section1 .allfilters {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+
+    .section1 .info {
+        text-align: left;
+    }
+
+}
+/* SECTION 2 */
+/* ASIDE 1*/
+
+.section2 h3, .section2 p {
+    margin: 0;
+}
+
+.section2 {
+    margin: 30px 20px;
+}
+
+.section2 .asides {
+    display: flex;
+    column-gap: 3%;
+}
+
+.section2 .aside1 {
+    width: 70%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding-bottom: 1px;
+}
+
+.section2 .aside1 .content {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 40px;
+    gap: 20px;
+}
+
+.section2 .aside1 .title {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.section2 .aside1 .title h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section2 .aside1 .content a {
+    display: block;
+}
+
+.section2 .aside1 .card1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 15px #d9d9d9;
+}
+
+.section2 .aside1 .card1:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.section2 .aside1 .card1 img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    padding: 5px;
+}
+
+.section2 .aside1 .card1 .description {
+    padding: 0 0 0px 15px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section2 .aside1 .card1 h3 {
+    font-size: 90%;
+    font-weight: 800;
+    padding-bottom: 0px;
+}
+
+.section2 .aside1 .card1 .description p {
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 3px;
+    margin-top: 3%;
+}
+
+/* STARS */
+
+.section2 .aside1 .card1 .stars {
+    padding: 0 0 5px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.section2 .aside1 :nth-child(2n) .blue-star::before {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 900; 
+    content: "\f005""\f005""\f005""\f005";
+    color: #0065FC;
+}
+
+.section2 .aside1 .card1:nth-child(2n) .grey-star::before {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 1000; 
+    content: "\f005";
+    color: #d8d9d8;
+}
+
+.section2 .aside1 .card1:nth-child(3) .blue-star::before, .section2 .aside1 .card1:nth-child(7) .blue-star::before  {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 900; 
+    content: "\f005""\f005""\f005""\f005""\f005";
+    color: #0065FC;
+}
+
+.section2 .aside1 .card1:nth-child(5) .blue-star::before {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 900; 
+    content: "\f005""\f005""\f005";
+    color: #0065FC;
+}
+
+.section2 .aside1 .card1:nth-child(5) .grey-star::before {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 1000; 
+    content: "\f005""\f005";
+    color: #d8d9d8;
+}
+
+#more {
+    margin-top: 15px;
+    font-size: large;
+    font-weight: 700;
+}
+
+#more:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+/* ASIDE 2 */
+
+.section2 .aside2 {
+    width: 30%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding-bottom: 1px;
+}
+
+.section2 .aside2 .content {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    margin: 27px;
+    gap: 20px;
+}
+
+.section2 .aside2 .title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.section2 .aside2 .title span::after {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 130%;
+    font-weight: 900; 
+    content: "\f005";
+    color: black
+}
+
+.section2 .aside2 .title h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section2 .aside2 .card2 {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-height: 140px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 15px #d9d9d9;
+}
+
+.section2 .aside2 .card2:hover:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.section2 .aside2 .card2 img {
+    height: 140px;
+    width: 130px;
+    min-width: 130px;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+    padding: 5px;
+}
+
+.section2 .aside2 .card2 .description {
+    padding: 17px 0 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section2 .aside2 .card2 h3 {
+    font-size: 90%;
+    font-weight: 800;
+    padding-bottom: 5px;
+}
+
+.section2 .aside2 .card2 .description p {
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 4px;
+}
+
+/* STARS */
+
+.section2 .aside2 .card2 .description .stars {
+    width: 100%;
+    height: 100%;
+    bottom: 10px;
+    left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.section2 .aside2 .content :nth-child(2) .card2 .blue-star::before {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 900; 
+    content: "\f005""\f005""\f005""\f005""\f005";
+    color: #0065FC;
+}
+
+.section2 .aside2 .content :nth-child(3) .card2 .blue-star::before,.section2 .aside2 .content :nth-child(4) .card2 .blue-star::before {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 900; 
+    content: "\f005""\f005""\f005""\f005";
+    color: #0065FC;
+}
+
+.section2 .aside2 .content :nth-child(3) .card2 .grey-star::before,.section2 .aside2 .content :nth-child(4) .card2 .grey-star::before {
+    font-family:"Font Awesome 6 Free"; 
+    font-size: 75%;
+    font-weight: 900; 
+    content: "\f005";
+    color: #d8d9d8;
+}
+
+@media screen and (max-width: 1140px)
+{
+    .section2 {
+        margin: 30px 0;
+    }
+
+    .section2 .aside1 {
+        width: 65%;
+    }
+
+    .section2 .aside2 {
+        width: 35%;
+    }
+
+    .section2 .aside1 .content, .section2 .aside2 .content {
+        margin: 20px;
+    }
+
+    .section2 .aside1 .card1 .description {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .section2 .asides {
+        flex-direction: column;
+        row-gap: 3%;
+        column-gap: unset;
+    }
+
+    .section2 .asides .aside1 {
+        order: 2;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: unset;
+        background-color: white;
+    }
+
+
+    .section2 .asides .aside2 {
+        width: 100%;
+        margin: 20px auto;
+        border-radius: unset;
+    }
+
+    .section2 .aside2 .content {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .section2 .aside2 .card2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0px 2px 15px #d9d9d9;
+    }
+
+    .section2 .aside2 .card2 img {
+        min-width: unset;
+        object-fit: cover;
+        border-radius: 20px 0 0 20px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .section2 .asides .aside1 {
+        background-color: white;
+        width: 100%;
+    }
+
+    .section2 .asides .aside1 .content {
+        flex-direction: column;
+    }
+    
+    .section2 .asides .aside2 {
+        width: 100%;
+    }
+
+    .section2 .asides .aside1 .card1 {
+        width: 100%;
+    }
+
+    .section2 .aside2 {
+        border-radius: unset;
+    }
+}
+
+/* SECTION 3 */
+
+.section3 {
+    margin: 30px 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.section3 h1 {
+    width: 100%;
+    padding: 15px 0 7px 0;
+}
+
+.section3 h3 {
+    font-size: 90%;
+    font-weight: 800;
+    padding-left: 15px;
+}
+
+.section3 .content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 430px;
+    gap: 4%;
+}
+
+.section3 .aside1, .section3 .aside2 {
+    display: flex;
+    width: 50%;
+    gap: 8%;
+}
+
+.section3 .bloc1, .section3 .bloc2, .section3 .bloc3, .section3 .bloc4 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section3 .card3 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0px 2px 15px #d9d9d9;
+    border-radius: 20px;
+}
+
+.section3 .card3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.section3 .card3:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.section3 .bloc2, .section3 .bloc4 {
+    justify-content: space-between;
+    gap: 11%;
+}
+
+.section3 #pomegues img {
+    max-height: 180px;
+}
+
+.section3 #frioul img {
+    max-height: 112px;
+}
+
+.section3 #garde img {
+    max-height: 138px;
+}
+
+.section3 #longchamp img {
+    max-height: 154px;
+}
+
+.section3 .aside2 .bloc3 h3 {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 992px)
+{
+    .section3 .content {
+        flex-direction: column;
+        height: auto;
+        gap: 9%;
+    }
+
+    .section3 .aside1, .section3 .aside2 {
+        width: 100%;
+        height: 447px;
+        gap: 7%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .section2 {
+        margin-bottom: 0;
+    }
+
+    .section3 {
+        margin-top: 0;
+    }
+    
+    .section3 .content, .section3 .content .aside1, .section3 .content .aside2{
+        flex-direction: column;
+        height: 100%;
+        gap: unset;
+    }
+
+    .section3 .bloc1, .section3 .bloc2, .section3 .bloc3, .section3 .bloc4 {
+        width: 100%;
+        gap: unset;
+    }
+
+    .section3 img, .section3 #pomegues img, .section3 #frioul img, .section3 #garde img, .section3 #longchamp img {
+        max-height: 120px;
+    }
+
+    .section3 .card3 {
+        margin-bottom: 20px;
+    }
+}
+
+/* FOOTER*/
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #F2F2F2;
+    margin-top: 60px;
+}
+
+footer .footer1, footer .footer2, footer .footer3 {
+    display: flex;
+    flex-flow: column nowrap ;
+    width: 33%;
+    font-weight: 500;
+    margin: 20px 0 40px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+footer h2 {
+    font-size: large;
+    font-weight: 700;
+}
+
+footer a {
+    padding: 5px;
+    width: min-content;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-flow: column nowrap;
+        padding-top: 10px;
+        padding-bottom: 35px;
+        margin-top: unset;
+    }
+
+    footer .footer1, footer .footer2, footer .footer3 {
+        margin: 20px 0 10px 20px;
+        width: 70%;
+    }
+}
