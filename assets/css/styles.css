@@ -255,6 +255,7 @@ h1 {
     display: flex;
     width: 25px;
     height: 25px;
+    aspect-ratio: 1 / 1;
     background-color: white;
     border: 1px solid #d8d9d8;
     border-radius: 50px;
